@@ -8,7 +8,6 @@ import axios from "axios"
 // In Hook contain Api that is going to fetch data according to its id them display them as value to each input
 // This is function contain Api that   update   new records updated on to the ID 
 function UpDate() {
-
     const [inputData, setinputData] = useState({
         name: '',
         email: ''
@@ -18,7 +17,7 @@ function UpDate() {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:3030/Data/${id}`)
+        axios.get(`http://localhost:3000/Data/${id}`)
             .then(res => {
                 setinputData(res.data)
             })
@@ -30,9 +29,9 @@ function UpDate() {
 
     const HandlEvent = (event) => {
         event.preventDefault()
-        axios.put(`http://localhost:3030/Data/${id}`, inputData)
+        axios.put(`http://localhost:3000/Data/${id}`, inputData)
             .then(res => {
-                alert("Data Successful Added ", res)
+                alert("Data Successful Added", res)
                 Navigate('/')
             })
     }

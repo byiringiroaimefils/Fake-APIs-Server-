@@ -11,12 +11,12 @@ function CreateData() {
   })
 
   const Navigate = useNavigate()
-  
+
   const HandlEvent = (event) => {
     event.preventDefault()
-    axios.post("http://localhost:3030/Data", inputData)
+    axios.post("http://localhost:3000/Data", inputData)
       .then(() => {
-        alert("Data Successful Added ")
+        alert("Data Successful Added")
         Navigate('/')
       })
   }
@@ -26,7 +26,7 @@ function CreateData() {
     <div>
       <form onSubmit={HandlEvent}>
         <label htmlFor="">Username</label> <br />
-        <input type="text" onChange={e => setinputData({ ...inputData, name: e.target.value })}  required /> <br />
+        <input type="text" onChange={e => setinputData({ ...inputData, name: e.target.value })} required /> <br />
         <label htmlFor="">Email</label><br />
         <input type="email" onChange={e => setinputData({ ...inputData, email: e.target.value })} required /> <br />
         <button>Add</button>

@@ -10,11 +10,12 @@ function Home() {
 
   const [data, setData] = useState({})
   const [Loading, setLoading] = useState(true)
-
   const Navigate = useNavigate();
+
+  
   // We are going to Hooks this Data with APIs
   useEffect(() => {
-    axios.get("http://localhost:3030/Data")
+    axios.get("http://localhost:3000/Data")
       .then(res => {
         setData(res.data);
         setLoading(false);
@@ -67,7 +68,7 @@ function Home() {
   function handleDelete(id) {
     const confirm = window.confirm("Do you want to Delete")
     if (confirm) {
-      axios.delete("http://localhost:3030/Data/" +id)
+      axios.delete("http://localhost:3000/Data/" + id)
         .then(() => {
           alert("Record Deleted")
           Navigate("/")
