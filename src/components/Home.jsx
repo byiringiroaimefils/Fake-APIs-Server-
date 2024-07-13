@@ -52,7 +52,7 @@ function Home() {
                     <td>{d.email}</td>
                     <td>
                      <button> <Link to={`/UpDate/${d.id}`}>Edit</Link></button>
-                      <button onClick={ e => handleDelete(d.id)}>Delete</button>
+                      <button onClick={ (e) => handleDelete(d.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
