@@ -43,7 +43,7 @@ function UpDate() {
 
         <div>
             <form onSubmit={HandlEvent}>
-                <label htmlFor="">Username</label> <br />
+                <label htmlFor="">Usernames</label> <br />
                 <input type="text" value={inputData.name} onChange={e => setinputData({ ...inputData, name: e.target.value })} /> <br />
                 <label htmlFor="">Email</label><br />
                 <input type="email" value={inputData.email} onChange={e => setinputData({ ...inputData, email: e.target.value })} /> <br />
