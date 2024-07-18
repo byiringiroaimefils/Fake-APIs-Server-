@@ -1,8 +1,6 @@
-// This is All dependencies I am going to use in this page.
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"
-//  This is function contain diferrernt function of Post new data in Db.json file 
 
 function CreateData() {
   const [inputData, setinputData] = useState({
@@ -20,7 +18,6 @@ function CreateData() {
         Navigate('/')
       })
   }
-
 
   return (
     <div>

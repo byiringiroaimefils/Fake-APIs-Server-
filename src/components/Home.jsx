@@ -1,19 +1,13 @@
-// This is All dependencies I am going to use in this page.
 import { useState, useEffect } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 
-// This is function that contains all data like to fetch data from db.json and Display them with
-//Api 
 
 function Home() {
-
   const [data, setData] = useState({})
   const [Loading, setLoading] = useState(true)
   const Navigate = useNavigate();
 
-  
-  // We are going to Hooks this Data with APIs
   useEffect(() => {
     axios.get("http://localhost:3000/Data")
       .then(res => {
@@ -25,9 +19,9 @@ function Home() {
         console.log('Err', err)
         setLoading(false)
       })
-
-
   }, [])
+
+
 
   return (
     <div>
@@ -51,8 +45,8 @@ function Home() {
                     <td>{d.name}</td>
                     <td>{d.email}</td>
                     <td>
-                     <button> <Link to={`/UpDate/${d.id}`}>Edit</Link></button>
-                      <button onClick={ (e) => handleDelete(d.id)}>Delete</button>
+                      <button> <Link to={`/UpDate/${d.id}`}>Edit</Link></button>
+                      <button onClick={(event) => handleDelete(d.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -63,8 +57,6 @@ function Home() {
       }
     </div>
   )
-  // This function is go used to Delete records according to its id fo data and also by using Delete method
-
   function handleDelete(id) {
     const confirm = window.confirm("Do you want to Delete")
     if (confirm) {

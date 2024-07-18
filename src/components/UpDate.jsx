@@ -1,12 +1,9 @@
-// This is All dependencies I am going to use in this page.
+
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 
 
-//This is UpDate function that contain Hook and  function 
-// In Hook contain Api that is going to fetch data according to its id them display them as value to each input
-// This is function contain Api that   update   new records updated on to the ID 
 function UpDate() {
     const [inputData, setinputData] = useState({
         name: '',
@@ -15,7 +12,6 @@ function UpDate() {
 
     const Navigate = useNavigate()
     const { id } = useParams()
-
     useEffect(() => {
         axios.get(`http://localhost:3000/Data/${id}`)
             .then(res => {
@@ -24,7 +20,7 @@ function UpDate() {
             .catch(err => {
                 console.log("error", err)
             })
-    }, [])
+    })
 
 
     const HandlEvent = (event) => {
@@ -35,7 +31,6 @@ function UpDate() {
                 Navigate('/')
             })
     }
-
 
 
 
