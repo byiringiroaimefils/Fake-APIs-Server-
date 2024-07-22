@@ -34,9 +34,9 @@ function Home() {
             <table>
               <thead>
                 <th>Id</th>
-                <th>Name</th>
+                <th>Names</th>
                 <th>Email</th>
-                <th>Action</th>
+                <th>Actions</th>
               </thead>
               <tbody>
                 {data.map((d, i) => (
