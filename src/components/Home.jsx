@@ -35,7 +35,7 @@ function Home() {
               <thead>
                 <th>Id</th>
                 <th>Names</th>
-                <th>Email</th>
+                <th>Emails</th>
                 <th>Actions</th>
               </thead>
               <tbody>
