@@ -27,7 +27,7 @@ function Home() {
     <div>
       {
         Loading ? (
-          <p>Loading....</p>
+          <p>Loading.</p>
         ) : (
           <div>
             <Link to="/CreateData">Add+</Link>
