@@ -27,7 +27,7 @@ function UpDate() {
         event.preventDefault()
         axios.put(`http://localhost:3000/Data/${id}`, inputData)
             .then(res => {
-                alert("Data Successful Added", res)
+                alert("Data Successfuls Added", res)
                 Navigate('/')
             })
     }
