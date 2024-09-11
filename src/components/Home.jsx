@@ -33,10 +33,10 @@ function Home() {
             <Link to="/CreateData">Add+</Link>
             <table>
               <thead>
-                <th>Ids</th>
-                <th>Names</th>
-                <th>Emails</th>
-                <th>Actions</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
               </thead>
               <tbody>
                 {data.map((d, i) => (
