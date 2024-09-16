@@ -30,11 +30,11 @@ function Home() {
           <p>Loading.</p>
         ) : (
           <div>
-            <Link to="/CreateData">Add+</Link>
+            <Link to="/CreateData">Add</Link>
             <table>
               <thead>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Ids</th>
+                <th>Names</th>
                 <th>Email</th>
                 <th>Action</th>
               </thead>
